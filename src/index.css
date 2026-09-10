@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", ui-serif, Georgia, serif;
+
+  --color-primary-50: #fef5f2;
+  --color-primary-100: #fee7e0;
+  --color-primary-200: #fccfc2;
+  --color-primary-300: #faac98;
+  --color-primary-400: #f78160;
+  --color-primary-500: #f36135;
+  --color-primary-600: #df4214;
+  --color-primary-700: #bc310b;
+  --color-primary-800: #9b2c0e;
+  --color-primary-900: #802a12;
+  --color-primary-950: #461104;
+
+  --color-black: #1b1b1b;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@theme {
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-marquee-reverse: marquee 36s linear infinite reverse;
+}
