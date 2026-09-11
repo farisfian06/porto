@@ -2,6 +2,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import profileImage from "../../assets/landing_page/Foto profile.png";
 
+const scrollTo = (selector: string) => {
+  window.__lenis?.scrollTo(selector, { duration: 1.4 });
+};
+
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,18 +50,20 @@ const HeroSection = () => {
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href="#project"
+              <button
+                type="button"
+                onClick={() => scrollTo("#project")}
                 className="rounded-full bg-primary-500 px-6 py-3 text-sm font-medium text-black transition-transform hover:-translate-y-1 active:scale-[0.98]"
               >
                 View projects <span aria-hidden="true">↘</span>
-              </a>
-              <a
-                href="#about"
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollTo("#about")}
                 className="rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-primary-500 hover:text-primary-400 active:scale-[0.98]"
               >
                 About me
-              </a>
+              </button>
             </div>
           </motion.div>
 
